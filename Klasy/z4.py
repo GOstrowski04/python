@@ -38,8 +38,20 @@ class Romanian:
         y = zamiana_na_arabskie(other.rzymska)
         return zamiana_na_rzymskie(x + y)
 
+    def odejmowanie(self, other):
+        x = zamiana_na_arabskie(self.rzymska)
+        y = zamiana_na_arabskie(other.rzymska)
+        return zamiana_na_rzymskie(x - y)
+
+    def mnozenie(self, other):
+        x = zamiana_na_arabskie(self.rzymska)
+        y = zamiana_na_arabskie(other.rzymska)
+        return zamiana_na_rzymskie(x * y)
+
 
 r1 = Romanian('VII')
 r2 = Romanian('CXVII')
 print(zamiana_na_rzymskie(1000))
 print(r1.dodawanie(r2))
+print(r2.odejmowanie(r1))
+print(r1.mnozenie(r2))
