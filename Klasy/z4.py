@@ -6,8 +6,11 @@ def zamiana_na_rzymskie(x):
     liczby = {1000: 'M', 900: 'CM', 500: 'D', 400: 'CD', 100: 'C', 90: 'XC', 50: 'L', 40: 'XL', 10: 'X', 9: 'IX',
               5: 'V', 4: 'IV', 1: 'I'}
     for i in liczby:
-        if x % i == 0:
-            s += liczby[i]*(x/i)
+        if x / i >= 1.0:
+            y = int(x/i)
+            for j in range(0, y):
+                s += liczby[i]
+                x -= i
     return s
 
 class Romanian:
@@ -30,3 +33,4 @@ class Romanian:
 
 r1 = Romanian('VII')
 print(r1.zamiana_na_arabskie())
+print(zamiana_na_rzymskie(1000))
