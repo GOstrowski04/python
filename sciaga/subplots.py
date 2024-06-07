@@ -33,7 +33,7 @@ handles = [plt.Line2D([0], [0], marker='o', color='w', label='Male', markersize=
            plt.Line2D([0], [0], marker='o', color='w', label='Female', markersize=10, markerfacecolor='pink')]
 fig.legend(handles=handles, title='Gender', loc='upper right')
 
-plt.ylim(0, 1)  # Set the lower limit to 0 and the upper limit to 1
+plt.ylim(None, 1)  # Set the lower limit to 0 and the upper limit to 1
 # Adjust layout
 plt.tight_layout()
 
